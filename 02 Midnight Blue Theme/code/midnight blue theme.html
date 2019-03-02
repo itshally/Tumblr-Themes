@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+    <!--
+        
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄            ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░▌          ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░▌           ▀▀▀▀█░█▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌       ▐░▌▐░▌               ▐░▌     ▐░▌          ▐░▌          
+▐░█▄▄▄▄▄▄▄█░▌▐░▌               ▐░▌     ▐░▌          ▐░█▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░▌               ▐░▌     ▐░▌          ▐░░░░░░░░░░░▌
+▐░█▀▀▀▀▀▀▀█░▌▐░▌               ▐░▌     ▐░▌          ▐░█▀▀▀▀▀▀▀▀▀ 
+▐░▌       ▐░▌▐░▌               ▐░▌     ▐░▌          ▐░▌          
+▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄  ▄▄▄▄█░█▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ 
+▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌
+ ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀ 
+                                                                 
+ ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄       ▄▄  ▄▄▄▄▄▄▄▄▄▄▄ 
+▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░▌     ▐░░▌▐░░░░░░░░░░░▌
+ ▀▀▀▀█░█▀▀▀▀ ▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌░▌   ▐░▐░▌▐░█▀▀▀▀▀▀▀▀▀ 
+     ▐░▌     ▐░▌       ▐░▌▐░▌          ▐░▌▐░▌ ▐░▌▐░▌▐░▌          
+     ▐░▌     ▐░█▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌ ▐░▐░▌ ▐░▌▐░█▄▄▄▄▄▄▄▄▄ 
+     ▐░▌     ▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌  ▐░▌  ▐░▌▐░░░░░░░░░░░▌
+     ▐░▌     ▐░█▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌   ▀   ▐░▌▐░█▀▀▀▀▀▀▀▀▀ 
+     ▐░▌     ▐░▌       ▐░▌▐░▌          ▐░▌       ▐░▌▐░▌          
+     ▐░▌     ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ 
+     ▐░▌     ▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌
+      ▀       ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀ 
+                                                                 
+        Notice:
+        
+        Please do not remove this copyright notice.
+        © 2019 Alice All Rights Reserved
+        
+        Theme name: Midnight Blue
+        Creator: Alice
+        
+     -->
+     
+     <head>
+        <meta charset="utf-8">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+        <title>{Title}</title>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100|Dancing+Script" rel="stylesheet">
+
+        
+        <!--colors-->
+        
+        <meta name="image:Background Image" content="http://static.tumblr.com/...">
+        
+        <meta name="color:Header Background Color" content="#2F394D">
+        <meta name="color:Title Text" content="#FFFBFE">
+        <meta name="color:Post Background Color" content="#2F394D">
+        <meta name="color:Post Text" content="#4F4F54">
+        <meta name="color:Footer Background Color" content="#191919">
+        <meta name="color:Footer Text" content="#FFFBFE">
+        
+        <meta name="text:Link 1" content="">
+        <meta name="text:Link 1 URL" content="/">
+        <meta name="text:Link 2" content="">
+        <meta name="text:Link 2 URL" content="/">
+        <meta name="text:Link 3" content="">
+        <meta name="text:Link 3 URL" content="/">
+        <meta name="text:Link 4" content="">
+        <meta name="text:Link 4 URL" content="/">
+        <meta name="text:Tumblr Username on Footer Ask" content="">
+        <meta name="text:Facebook Username" content="">
+        <meta name="text:Instagram Username" content="">
+        <meta name="text:Twitter Username" content="">
+        <meta name="text:Youtube Username" content="">
+        <meta name="text:Pinterest Username" content="">
+        
+        <meta name="if:Show Background Image" content="0">
+        <meta name="if:Header Title Glow" content="1">
+        <meta name="if:Show Link 1" content="1">
+        <meta name="if:Show Link 2" content="1">
+        <meta name="if:Show Link 3" content="1">
+        <meta name="if:Show Link 4" content="1">
+        <meta name="if:Show Link 5" content="1">
+        <meta name="if:Show Archive" content="1">
+        <meta name="if:Show RSS" content="1">
+        <meta name="if:Show Footer Title" content="1">
+        <meta name="if:Show Description" content="1">
+        <meta name="if:Show Facebook" content="1">
+        <meta name="if:Show Instagram" content="1">
+        <meta name="if:Show Twitter" content="1">
+        <meta name="if:Show Youtube" content="1">
+        <meta name="if:Show Pinterest" content="1">
+        <meta name="if:Show Tags" content="1">
+        <meta name="if:Show Footer Ask" content="0">
+        <meta name="if:Show Ask Link" content="1">
+        <style> 
+            html, body{
+                padding: 0px;
+                margin: 0px;
+            }
+            html{
+                background: url({image:Background Image});
+                height: 100%;
+                font-family: 'Catamaran', sans-serif;
+            }
+            
+            #header-container{
+                background-color: {color:Header Background Color};
+                position: fixed;
+                width: 100%;
+                color: {color:Title Text};
+                top: 0;
+                margin-bottom: 75%;
+                z-index: 2;
+            }
+            #header-title, #nav-bar{
+                text-align: center;
+            }
+            #header-title{
+                font-size: 45pt;
+                margin-top: 2.5%;
+                font-family: 'Dancing Script', cursive;
+                {block:ifHeaderTitleGlow}
+                    text-shadow: 0px 0px 25px #9f9fA1;
+                {/block:ifHeaderTitleGlow}
+            }
+            #nav-bar{
+                width: 100%;
+                padding-bottom: 10px;
+            }
+            .link-list{
+                list-style: none;
+                display: inline;
+                font-size: 10pt;
+                margin: 15px;
+            }
+            .nav-links{
+                text-decoration: none;
+                color: {color:Title Text};
+            }
+            
+            hr{
+                border: 0.4px solid white;
+                margin-bottom: 0px;
+                width: 60%;
+            }
+            #post-container{
+                background-image: url({image:Background Image});
+                background-repeat: no-repeat;
+                background-size: cover;
+                {block:ifShowBackgroundImage}
+                    background: linear-gradient(180deg, {color:Header Background Color} , #FFFBFE);
+                {/block:ifShowBackgroundImage}
+                position: initial;
+                width: auto;
+                height: 100%;
+                display: block;
+                margin: 195px auto 0px auto;
+            }
+            .post-container-content{
+                background-color: {color:Post Background Color};
+                border-left: 1px solid {color:Post Text};
+                border-right: 1px solid {color:Post Text};
+                width: 50%;
+                padding: 11.5% 5% 15% 5%;
+                margin: -10.5% auto -6% auto;
+                color: {color:Post Text};
+            }
+            .source a{
+                text-decoration: none;
+                color: {color:Post Text};
+                word-break: break-all;
+            }
+            .video-post iframe{
+                width: 100%;
+                height: 500px;
+                display: block;
+                margin: auto;
+            }
+            .chat-title, .post-quote, .text-title{
+                color: {color:Title Text};
+                /*font-family: 'Dancing Script', cursive;*/
+                font-size: 21pt;
+                font-weight: normal;
+            }
+            .link-post-name{
+                text-decoration: none;
+                color: {color:Post Text};
+                font-size: 24pt;
+            }
+            #highres-container, .post-photo{
+                width: 100%;
+            }
+            .post-photo:hover{
+                opacity: 0.5;
+                z-index: -1;
+            }
+            #excerpt-text, .question{
+                width: 80%;
+                display: block;
+                background-color: #4F4F54;
+                padding: 20px;
+                margin-top: 2.5%;
+            }
+            #tag-container{
+                float: left;
+                width: 60%;
+                margin-left: 25px;
+            }
+            #post-options{
+                float: right;
+                width: 20%;
+                justify-content: center;
+                margin: 0px;
+                padding: 0px;
+                display: inline-flex;
+            }
+            .like_button{
+                margin-left: 10px;
+            }
+            .note-count{
+                text-decoration: none;
+                font-size: 10pt;
+                color: {color:Post Text};
+            }
+            .tag-links{
+                color: #2F394D;
+                background-color: #BFBFC0;
+                padding: 2px 5px 2px 5px;
+                border-radius: 5%;
+                text-decoration: none;
+                font-size: 8.5pt;
+            }
+            .post-tags{
+                display: inline-block;
+            }
+            .post-buttons{
+                color: #3F6887;
+            }
+            .reblog-source{
+                color: {color:Post Text};
+                text-decoration: none;
+                font-size: 10pt;
+                padding: 5px 5px 15px 5px;
+            }
+            .page-nav-link, .jump_page{
+                text-decoration: none;
+                color: {color:Post Text};
+            }
+            .current_page{
+                background-color: {color:Post Text};;
+                padding: 2px 10px 2px 10px;
+            }
+            .jump_page{
+                padding: 0px 10px 0px 10px;
+            }
+            .pagination{
+                text-align: center;
+                display: block;
+                text-indent: 15px;
+                padding-bottom: 5px;
+            }
+            .post-notes{
+                position: relative;
+                margin-top: 5%;
+                margin-bottom: -14%;
+            }
+            .post-notes ol li{
+                list-style-type: none;
+            }
+            .post-notes .avatar_frame{
+                margin-right: 10px;
+            }
+            .question img{
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+            .question p{
+                margin-left: 30px;
+                padding: 0px;
+            }
+            .post-notes a{
+                text-decoration: none;
+                font-weight: bold;
+                color: {color:Post Text};
+            }
+            #footer-container{
+                margin-bottom: 0px;
+                bottom: 0px;
+                background-color: {color:Footer Background Color};
+                width: 100%;
+                height: 100%;
+            }
+            #footer-contents{
+                color: {color:Footer Text};
+                margin: 0px 5% 0px 5%;
+                padding: 3.5%;
+            }
+            h3{
+                font-size: 18pt;
+            }
+            .avatar-style-square {
+                -webkit-box-shadow: 0 0 0 4px {color:Page Background Color};
+                box-shadow: 0 0 0 4px {color:Page Background Color};
+            }
+            .avatar-style-circle {
+                -webkit-box-shadow: 0 0 0 4px {color:Page Background Color};
+                box-shadow: 0 0 0 4px {color:Page Background Color};
+                border-radius: 50%;
+            }
+            .blog-avatar{
+                margin-bottom: -15px;
+            }
+            #blogger-description-container, #social-platforms-container{
+                float: left;
+                width: 50%;
+            }
+            #description-content{
+                width: 75%;
+                font-size: 12pt;
+                margin-top: -2%;
+            }
+            #social-platforms-container{
+                text-align: center;
+            }
+            .footer-links{
+                color: white;
+                text-decoration: none;
+            }
+            .footer-links:hover{
+                color: white;
+            }
+            .link-icon{
+                font-size: 20pt;
+                margin: 0px 2.5px 0px 2.5px;
+            }
+            #copyright-notice{
+                text-align: center;
+                font-size: 8pt;
+                color: {color:Footer Text};
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="header-container">
+            <h1 id="header-title">{Title}</h1>
+            <div id="nav-bar">
+                <li class="link-list"><a href="{BlogURL}" class="nav-links">Home</a></li>
+                {block:ifShowLink1}
+                    <li class="link-list"><a href="{text:Link 1 URL}" class="nav-links">{text:Link 1}</a></li>
+                {/block:ifShowLink1}
+                {block:ifShowLink2}
+                    <li class="link-list"><a href="{text:Link 2 URL}" class="nav-links">{text:Link 2}</a></li>
+                {/block:ifShowLink2}
+                {block:ifShowLink3}
+                    <li class="link-list"><a href="{text:Link 3 URL}" class="nav-links">{text:Link 3}</a></li>
+                {/block:ifShowLink3}
+                {block:ifShowLink4}
+                    <li class="link-list"><a href="{text:Link 4 URL}" class="nav-links">{text:Link 4}</a></li>
+                {/block:ifShowLink4}
+                {block:ifShowArchive}
+                    <li class="link-list"><a href="/archive" class="nav-links">Archive</a></li>
+                {/block:ifShowArchive}
+                {block:ifShowRSS}
+                    <li class="link-list"><a href="{RSS}" class="nav-links">RSS</a></li>
+                {/block:ifShowRSS}
+            </div>
+        </div>
+
+        <div id="post-container">
+            {block:Posts}
+            
+                <div class="post-container-content">
+                    {block:ContentSource}
+                        <a href="{SourceURL}" class="reblog-source"><i class="fas fa-sync-alt"></i> Reblogged from: 
+                            {block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}
+                        </a>
+                    {/block:ContentSource}
+                    
+                    {block:Text}
+                        {block:Title}<h2 class="text-title"><a href="{Permalink}" style="text-decoration: none; color:{color:Post Text};">{Title}</a></h2>{/block:Title}
+                        {Body}
+                    {/block:Text}
+                    {block:Chat}
+                        {block:Title}<h2 class="chat-title">{Title}</h2>{/block:Title}
+                        
+                        {block:Lines}
+                            <p>{block:Label}<label>{Label}</label>{/block:Label}
+                            {Line}</p>
+                        {/block:Lines}
+                    {/block:Chat}
+                    
+                    {block:Audio}
+                        {block:AudioPlayer}
+                            {AudioPlayer}
+                        {/block:AudioPlayer}
+                        
+                        {block:Caption} 
+                            <p class="post-caption">{Caption}</p>
+                        {/block:Caption}	
+                    {/block:Audio}
+                    
+                    <!-- video post -->
+                    <div class="video-post">
+                        {block:Video}
+                            {Video-500}
+                            {block:Caption}
+                                <p class="post-caption">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Video}
+                    </div>
+                    
+                    {block:Link}
+                        <a href="{URL}" class="link-post-name" {Target}>{Name}</a> 
+                        {block:Excerpt}
+                            <div id="excerpt-text">{Excerpt}<br>
+                            {block:Author}<p style="margin-left: 25px; padding-top: 5px; margin-bottom: -5px;">By: {Author}</p>{/block:Author}</div>
+                        {/block:Excerpt}
+                        
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    {/block:Link}
+                    
+                    {block:Quote}
+                        <h2 class="post-quote">
+                            "{Quote}"
+                        </h2>
+                        {block:Source}
+                            <div class="source">~ {Source}</div>
+                        {/block:Source}
+                {/block:Quote}
+                
+                {block:Photo}
+                        
+                                    {LinkOpenTag}{block:HighRes}
+                                <a href="{PhotoURL-HighRes}" class="photo-highres" target="_blank">
+                                        <img src="{PhotoURL-500}" class="post-photo" alt="{PhotoAlt}"></a>
+                        {/block:HighRes}
+                                    {LinkCloseTag}
+                                
+                    {block:Caption}
+                        <p class="post-caption">{Caption}</p>
+                    {/block:Caption}
+                {/block:Photo}
+                
+                {block:Photoset}
+                    {block:Photos}
+                        {block:HighRes}
+                                <a href="{PhotoURL-HighRes}" class="photo-highres" target="_blank">
+                                        <img src="{PhotoURL-500}" class="post-photo" alt="{PhotoAlt}"></a>
+                        {/block:HighRes}
+                    {/block:Photos}
+                    {block:Caption}
+                            <p class="post-caption">{Caption}</p>
+                        {/block:Caption}
+                {/block:Photoset}
+                
+                {block:Panorama}
+                    {LinkOpenTag}
+                        <img src="{PhotoURL-Panorama}" class="post-photo panorama-photo" alt="{PhotoAlt}" />
+                    {LinkCloseTag}
+                    {block:Caption}
+                        <p class="post-caption">{Caption}</p>
+                    {/block:Caption}
+                {/block:Panorama}    
+                    
+                    {block:Answer}
+                        <div class="question">
+                            <img src="{AskerPortraitURL-24}" class="question-photo">{Asker}
+                            <a href="{Permalink}" style="text-decoration:none; color:{color:Post Text};"><p>{Question}</p></a>
+                        </div>
+                        <p>{Answer}</p>
+                    {/block:Answer}
+                    
+                    <hr style="width: 100%;border: 0.5px solid #BFBFC0; margin-bottom:10px;">
+                    <div id="post-footer">
+                    
+                        <div id="tag-container">
+                            {block:ifShowTags}
+                                {block:HasTags}
+                                        {block:Tags}
+                                                <a href="{TagURL}" class="tag-links"><span class="post-tags"><i class="fas fa-hashtag"></i>{Tag}</span></a>
+                                        {/block:Tags}
+                                {/block:HasTags}
+                            {/block:ifShowTags}
+                        </div>
+                        <div id="post-options">
+                            <a href="{Permalink}" class="note-count">{NoteCountWithLabel}</a>
+                            {LikeButton size="15"}
+                            {ReblogButton size="15"}
+                        </div>
+                    </div>
+                    
+                    <div class="post-notes">
+                        {block:PostNotes}
+                            <p>{PostNotes-16}</p>
+                        {/block:PostNotes}      
+                    </div>
+                </div>
+                
+                <!-- post footer -->
+                
+            {/block:Posts}
+            
+            
+            
+            
+            {block:Pagination}
+                        <div class="pagination">
+                            {block:PreviousPage}
+                                <a href="{PreviousPage}" class="page-nav-link current-page" data-current-page="{CurrentPage}"><i class="fas fa-angle-left"></i></a>
+                            {/block:PreviousPage}
+                            
+                            {block:JumpPagination length="5"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}
+                            
+                            {block:NextPage}
+                                <a href="{NextPage}" class="page-nav-link data-current-page="{CurrentPage}""><i class="fas fa-angle-right"></i></a>
+                            {/block:NextPage}
+                        </div>
+                    {/block:Pagination}
+        </div>
+
+        <div id="footer-container">
+            <div id="footer-contents">
+                <div id="blogger-description-container">
+                    {block:ShowAvatar}
+                    <img class="blog-avatar avatar-style-{AvatarShape}" src="{PortraitURL-128}" width="100" height="100">
+                    {/block:ShowAvatar}
+                    {block:ifShowFooterTitle}
+                        <h3>{Title}</h3>
+                    {/block:ifShowFooterTitle}
+                    {block:ifShowDescription}
+                        <p id="description-content">{Description}</p>
+                    {/block:ifShowDescription}
+                </div>
+                
+                <div id="social-platforms-container">
+                    <h3 style="margin-top: -15px; margin-bottom: -2.5px;">Connect With Me</h3>
+                    <div id="social-platforms">
+                        {block:ifShowFacebook}
+                            <a href="https://www.facebook.com/{text:Facebook Username}" class="footer-links" target="_blank"><i class="fab fa-facebook link-icon"></i></a>
+                        {/block:ifShowFacebook}
+                        {block:ifShowInstagram}
+                            <a href="https://www.instagram.com/{text:Instagram Username}" class="footer-links" target="_blank"><i class="fab fa-instagram link-icon"></i></a>
+                        {/block:ifShowInstagram}
+                        {block:ifShowTwitter}
+                            <a href="https://twitter.com/{text:Twitter Username}" class="footer-links" target="_blank"><i class="fab fa-twitter-square link-icon"></i></a>
+                        {/block:ifShowTwitter}
+                        {block:ifShowYoutube}
+                            <a href="https://www.youtube.com/{text:Youtube Username}" class="footer-links" target="_blank"><i class="fab fa-youtube-square link-icon"></i></a>
+                        {/block:ifShowYoutube}
+                        {block:ifShowPinterest}
+                            <a href="https://www.pinterest.ca/{text:Pinterest Username}" class="footer-links" target="_blank"><i class="fab fa-pinterest-square link-icon"></i></a>
+                        {/block:ifShowPinterest}
+                    </div>
+                    
+                    {block:ifShowAskLink}
+                        <h3><a href="/ask" class="footer-links"><i class="fas fa-user-check"></i> Ask Me Here </a></h3>
+                    {/block:ifShowAskLink}
+                    {block:ifShowFooterAsk}
+                    <h3 style="margin-bottom: -5px;">Ask Me:</h3>
+                    <p><iframe frameborder="0" scrolling="no" width="70%" height="190" src="https://www.tumblr.com/ask_form/{text:Tumblr Username on Footer Ask}.tumblr.com" style="background-color:transparent; overflow:hidden;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]--></p>
+                    {/block:ifShowFooterAsk}
+                </div>
+            </div>
+            <hr style="width: 85%; padding-top: 1px">
+            <div id="copyright-notice">
+                <p>&copy; 2019 <a href="https://aliceontheme.tumblr.com/" target="_blank" class="footer-links">Alice</a>. All Rights Reserved
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    
+        
+ .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |      __      | || |   _____      | || |     _____    | || |     ______   | || |  _________   | |
+| |     /  \     | || |  |_   _|     | || |    |_   _|   | || |   .' ___  |  | || | |_   ___  |  | |
+| |    / /\ \    | || |    | |       | || |      | |     | || |  / .'   \_|  | || |   | |_  \_|  | |
+| |   / ____ \   | || |    | |   _   | || |      | |     | || |  | |         | || |   |  _|  _   | |
+| | _/ /    \ \_ | || |   _| |__/ |  | || |     _| |_    | || |  \ `.___.'\  | || |  _| |___/ |  | |
+| ||____|  |____|| || |  |________|  | || |    |_____|   | || |   `._____.'  | || | |_________|  | |
+| |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+ .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
+| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+| |  _________   | || |  ____  ____  | || |  _________   | || | ____    ____ | || |  _________   | |
+| | |  _   _  |  | || | |_   ||   _| | || | |_   ___  |  | || ||_   \  /   _|| || | |_   ___  |  | |
+| | |_/ | | \_|  | || |   | |__| |   | || |   | |_  \_|  | || |  |   \/   |  | || |   | |_  \_|  | |
+| |     | |      | || |   |  __  |   | || |   |  _|  _   | || |  | |\  /| |  | || |   |  _|  _   | |
+| |    _| |_     | || |  _| |  | |_  | || |  _| |___/ |  | || | _| |_\/_| |_ | || |  _| |___/ |  | |
+| |   |_____|    | || | |____||____| | || | |_________|  | || ||_____||_____|| || | |_________|  | |
+| |              | || |              | || |              | || |              | || |              | |
+| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+ '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+        
+        Notice:
+        
+        Please do not remove this copyright notice.
+        © 2019 Alice All Rights Reserved
+        
+        Theme Name: blush theme
+        Creator: Alice
+        
+        -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{Title}</title>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+        <link rel="shortcut icon" href="{Favicon}" />
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300|Source+Sans+Pro:200" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+        <meta name="color:Page Background Color" content="#FFF5F4">
+        <meta name="color:Sidebar Background Color" content="#FFECEB">
+        <meta name="color:Sidebar Font Color" content="#F5A9C0">
+        <meta name="color:Post Body Color" content="#8B8B8B">
+        
+        <meta name="text:Link 1" content="">
+        <meta name="text:Link 1 URL" content="/">
+        <meta name="text:Link 2" content="">
+        <meta name="text:Link 2 URL" content="/">
+        <meta name="text:Link 3" content="">
+        <meta name="text:Link 3 URL" content="/">
+        <meta name="text:Link 4" content="">
+        <meta name="text:Link 4 URL" content="/">
+        <meta name="text:Link 5" content="">
+        <meta name="text:Link 5 URL" content="/">
+        
+        <meta name="if:Show Link 1" content="1">
+        <meta name="if:Show Link 2" content="1">
+        <meta name="if:Show Link 3" content="1">
+        <meta name="if:Show Link 4" content="1">
+        <meta name="if:Show Link 5" content="1">
+
+        <style>
+            body{
+                background-color: {color:Page Background Color};
+                display: inline;
+            }
+            .entire-content{
+                width: 70%;
+                display: block;
+                margin: 5% auto 0% auto;
+                font-family: 'Raleway', sans-serif;
+            }
+            /* sidebar */
+            .sidebar-container{
+                background-color: {color:Sidebar Background Color};
+                width: 250px;
+                height: 750px;
+                margin: 0% 0px 0px 40px;
+                position: fixed;
+                font-size: 11pt;
+                font-weight: bold;
+            }
+            .sidebar-container-content{
+                margin-top: 55%;
+            }
+            .blog-avatar{
+                display: block;
+                margin: auto auto 5px auto;
+            }
+            .avatar-style-square {
+                -webkit-box-shadow: 0 0 0 4px {color:Page Background Color};
+                box-shadow: 0 0 0 4px {color:Page Background Color};
+            }
+            .avatar-style-circle {
+                -webkit-box-shadow: 0 0 0 4px {color:Page Background Color};
+                box-shadow: 0 0 0 4px {color:Page Background Color};
+                border-radius: 50%;
+            }
+            #sidebar-title{
+                font-size: 15pt;
+                padding: 5px;
+                margin: auto auto 5px auto;
+                text-align: center;
+            }
+            #title, .added-link a{
+                color: {color:Sidebar Font Color};
+            }
+            #title:hover, .added-link a:hover{
+                color: {color:Sidebar Font Color};
+                text-decoration: none; 
+            }
+            #sidebar-description{
+                font-weight: 900;
+                max-height: 200px;
+                overflow: hidden;
+            }
+            #sidebar-description, .added-link, .copyright-notice{
+                color: {color:Sidebar Font Color};
+                padding: 12px;
+                font-size: 8.5pt;
+                margin: auto;
+                width: auto;
+                overflow-wrap: break-word;
+            }
+            .additional-links-list{
+                padding: 10px;
+                text-align: center;
+            }
+            .added-link{
+                background-color: transparent;
+                border: 1px solid {color:Page Background Color};
+                border-left-color: transparent;
+                border-right-color: transparent;
+                padding: 5px;
+                width: 100%;
+            }
+            .link1{
+                border-top-color: transparent;
+            }
+            .link5{
+                border-bottom-color: transparent;
+                margin-bottom: 5px;
+            }
+            .icon-links{
+                width: auto;
+                margin: auto;
+                text-align: center;
+            }
+            .sidebar-icon{
+                border: 2px solid {color:Page Background Color};
+                border-radius: 50%;
+                padding: 5px;
+                margin: auto;
+                list-style-type: none;
+                text-align: center;
+                width: 40px;
+                display: inline-block;
+            }
+            .sidebar-links, .page-nav-link{
+                color: {color:Sidebar Font Color};
+            }
+            .sidebar-links:hover, .page-nav-link:hover{
+                color: {color:Sidebar Font Color};
+            }
+            
+            .pagination{
+                margin: 25px auto 15px auto;
+                display: block;
+                text-align: center;
+                padding: 5px;
+                width: 25%;
+                font-size: 15pt;
+            }
+            .copyright-notice{
+                padding: 0px;
+                position: fixed;
+                z-index: 0;
+                bottom: 120px;
+            }
+            .copyright-notice p{
+                text-align: center;
+                display: block;
+                margin-left: 25px;
+            }
+            
+            .post-container{
+                width: 500px;
+                margin: 10px auto 0% 325px;
+                color: {color:Post Body Color};
+                font-size: 9pt;
+            }
+            .text-post-content img{
+                width: auto;
+                height: auto;
+                padding: 5px;
+            }
+            .photo-content-img{
+                width:auto;
+            }
+            .quote-source{
+                text-align: center;
+            }
+            .audio-label{
+                background-color: transparent;
+                border: none;
+            }
+            .question-container{
+                background-color: #E9E9E9;
+                padding: 15px;
+            }
+            .asker{
+                display: inline;
+            }
+            .asker a, .post-content a{
+                color: {color:Post Body Color};
+            }
+            .asker a:hover, .post-content a:hover{
+                color: {color:Sidebar Font Color};
+                text-decoration: none;
+            }
+            .post-footer{
+                display: block;
+                text-align: center;
+                margin-bottom: 75px;
+            }
+            .post-footer hr{
+                margin-top: 0px;
+            }
+            .post-date, .post-options, .post-tags{
+                font-size: 8pt;
+            }
+            .post-tags a, .post-options a, .tag-links, .note-count{
+                color: {color:Post Body Color};
+            }
+            .post-tags a:hover, .post-options a:hover, .tag-links:hover, .note-count:hover{
+                color: {color:Sidebar Font Color};
+                text-decoration: none;
+            }
+            .tag-links:hover{
+                background-color: #C4CEEA;
+                padding: 0.5px;
+                border-radius: 5%;
+            }
+            .post-options{
+                width: 100%;
+            }
+            .post-options ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .post-options li{
+                display: inline-flex;
+                text-align: center;
+            }
+            
+    
+            
+            /* Custom CSS*/
+            {CustomCSS}
+        </style>
+    </head>
+    
+    <body>
+        <div class="entire-content">
+            <div class="container sidebar-container">
+                <div class="sidebar-container-content">
+                    {block:ShowAvatar}
+                    <img class="blog-avatar avatar-style-{AvatarShape}" src="{PortraitURL-128}" width="100" height="100">
+                    {/block:ShowAvatar}
+                    <h1 id="sidebar-title"><a id="title" href="/">{Title}</a></h1>
+                    <p id="sidebar-description">{Description}</p>
+                    
+                    <div class="additional-links-list">
+                        <ul class="list-group additional-links">
+                            {block:IfShowLink1}
+                                <li class="list-group-item added-link link1">
+                                    <a href="{text:Link 1 URL}">{text:Link 1}</a>
+                                </li>
+                            {/block:IfShowLink1}
+                            {block:IfShowLink2}
+                                <li class="list-group-item added-link">
+                                    <a href="{text:Link 2 URL}">{text:Link 2}</a>
+                                </li>
+                            {/block:IfShowLink2}
+                            {block:IfShowLink3}
+                                <li class="list-group-item added-link">
+                                    <a href="{text:Link 3 URL}">{text:Link 3}</a>
+                                </li>
+                            {/block:IfShowLink3}
+                            {block:IfShowLink4}
+                                <li class="list-group-item added-link">
+                                    <a href="{text:Link 4 URL}">{text:Link 4}</a>
+                                </li>
+                            {/block:IfShowLink4}
+                            {block:IfShowLink5}
+                                <li class="list-group-item added-link link5">
+                                    <a href="{text:Link 5 URL}">{text:Link 5}</a>
+                                </li>
+                            {/block:IfShowLink5}
+                        </ul>
+                    </div>
+                    
+                    <div class="icon-links">
+                        <li class="sidebar-icon">
+                            <a href="{BlogURL}" class="sidebar-links"><i class="fas fa-home" title="Home"></i></a>
+                        </li>
+                        <li class="sidebar-icon">
+                            <a href="/archive" class="sidebar-links"><i class="fas fa-archive" title="Archive"></i></a>
+                        </li>
+    
+                        <li class="sidebar-icon">
+                            <a href="{RSS}" class="sidebar-links"><i class="fas fa-rss" title="RSS"></i></a>
+                        </li>
+    
+                        {block:AskEnabled}
+                        <li class="sidebar-icon">
+                            <a href="/ask" class="sidebar-links"><i class="fas fa-question" title="Ask Me"></i></a>
+                        </li>
+                        {/block:AskEnabled}
+    
+                        {block:SubmissionsEnabled}
+                        <li class="sidebar-icon">
+                            <a href="/submit" class="sidebar-links">{SubmitLabel}</a>
+                        </li>
+                        {/block:SubmissionsEnabled}
+                    </div>
+
+                    {block:Pagination}
+                        <div class="pagination">
+                            {block:PreviousPage}
+                                <a href="{PreviousPage}" class="page-nav-link" data-current-page="{CurrentPage}"><i class="fas fa-angle-left"></i></a>
+                            {/block:PreviousPage}
+                            
+                            {block:NextPage}
+                                <a href="{NextPage}" class="page-nav-link data-current-page="{CurrentPage}""><i class="fas fa-angle-right"></i></a>
+                            {/block:NextPage}
+                        </div>
+                    {/block:Pagination}
+                </div>
+                <div class="copyright-notice">
+                    <p>&copy; 2019 <a href="https://aliceontheme.tumblr.com/" class="sidebar-links">Alice</a>. All Rights Reserved
+                </div>
+            </div>
+
+            <section class="container-fluid post-container">
+                {block:Posts}
+                    <div class="post-content">
+                        {block:Text}
+                            {block:Title}
+                                <h2 class="post-title">
+                                    <a href="{Permalink}">{Title}</a>
+                                </h2>
+                            {/block:Title}
+
+                            <div class="container post-content">
+                                <div class="container text-post-content">{Body}</div>
+                            </div>
+                        {/block:Text}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Photo}
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photo-content-img">
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Photo}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Panorama}
+                            {LinkOpenTag}
+                                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+                            {CloseOpenTag}
+        
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Panorama}
+                    </div>
+                    
+                    <div class="post-content">
+                        {block:Photoset}
+                            {Photoset-500}
+        
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Photoset}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Quote}
+                            <blockquote class="blockquote text-center">
+                                &ldquo;{Quote}&rdquo;
+                            </blockquote>
+        
+                            {block:Source}
+                                <p class="quote-source">- {Source}</p>
+                            {/block:Source}
+                        {/block:Quote}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Link}
+                            {block:Thumbnail}
+                                <img src="{Thumbnail}" alt="{Name}">
+                            {/block:Thumbnail}
+                            <a href="{URL}" class="link-post-content" {Target}>{Name}</a>
+        
+                            {block:Description}
+                                <p>{Description}</p>
+                            {/block:Description}
+                        {/block:Link}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Chat}
+                            {block:Title}
+                                <h2 class="post-title">
+                                    <a href="{Permalink}">{Title}</a>
+                                </h2>
+                            {/block:Title}
+        
+                            {block:Lines}
+                                {block:Label}
+                                    <b>{Label}</b>
+                                {/block:Label}
+        
+                                <p>{Line}</p>
+                            {/block:Lines}
+                        {/block:Chat}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Audio}
+                            {block:AudioEmbed}
+                                {AudioEmbed-500}
+                            {/block:AudioEmbed}
+    
+                            <ul>
+                                {block:TrackName}
+                                    <li class="list-group-item audio-label">
+                                        <b>Title: </b>{TrackName}
+                                    </li>
+                                {/block:TrackName}
+    
+                                {block:Artist}
+                                    <li class="list-group-item audio-label">
+                                            <b>Artist: </b>{Artist}
+                                    </li>
+                                {/block:Artist}
+                            </ul>
+                        
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                    {/block:Audio}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Video}
+                            {Video-500}
+    
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                    {/block:Video}
+                    </div>
+    
+                    <div class="post-content">
+                        {block:Answer}
+                            <div class="question-container">
+                                <p class="asker">
+                                    {Asker}:<br>
+                                    <a href="{Permalink}">{Question}</a>
+                                </p>
+                            </div>
+                            <p>{Answer}</p>
+                        {/block:Answer}
+                    </div>
+                    
+                    <div class="post-footer">
+                        <hr>
+                        {block:HasTags}
+                            {block:Tags}
+                                <a href="{TagURL}" class="tag-links"><span class="post-tags">{Tag}</span></a>
+                            {/block:Tags}
+                        {/block:HasTags}
+                        
+                        {block:Date}
+                            <div class="post-date">{ShortMonth}/{DayOfMonthWithZero}/{Year}
+                        {/block:Date} - <a href="{Permalink}" class="note-count">{NoteCountWithLabel}</a></div>
+                                
+                        <div class="post-options">
+                            <ul>
+                                <li>{LikeButton size="14" color="grey"}</li>
+                                <li>{ReblogButton size="14" color="grey"}</li>
+                            </ul>
+                        </div>
+                    </div>
+                {/block:Posts}
+            </section>
+        </div>
+    </body>
+</html>
