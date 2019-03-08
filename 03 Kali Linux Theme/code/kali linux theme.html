@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--
+    
+    
+              _        __     _                             
+             / \      [  |   (_)                            
+            / _ \      | |   __    .---.   .---.            
+           / ___ \     | |  [  |  / /'`\] / /__\\           
+         _/ /   \ \_   | |   | |  | \__.  | \__.,           
+        |____|_|____|_[___] [___] '.___.'  '.__.'           
+        |  _   _  | [  |                                    
+        |_/ | | \_|  | |--.    .---.   _ .--..--.    .---.  
+            | |      | .-. |  / /__\\ [ `.-. .-. |  / /__\\ 
+           _| |_     | | | |  | \__.,  | | | | | |  | \__., 
+          |_____|   [___]|__]  '.__.' [___||__||__]  '.__.' 
+                                                            
+        
+        Notice:
+        
+        Please do not remove this copyright notice.
+        © 2019 Alice All Rights Reserved
+       
+       Theme Name: kali linux theme
+       Creator: Alice
+    
+    -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{Title}</title>
+        {block:Description}
+            <meta name="description" content="{MetaDescription}">
+        {/block:Description}
+        <link rel="shortcut icon" href="{Favicon}" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|PT+Sans" rel="stylesheet">
+
+        <meta name="text:Terminal Name" content="KaliLinuxTheme">
+        <meta name="image:Background Image" content="http://static.tumblr.com/...">
+        <meta name="text:Link 1" content="">
+        <meta name="text:Link 1 URL" content="/">
+        <meta name="text:Link 2" content="">
+        <meta name="text:Link 2 URL" content="/">
+        <meta name="text:Link 3" content="">
+        <meta name="text:Link 3 URL" content="/">
+        <meta name="text:Link 4" content="">
+        <meta name="text:Link 4 URL" content="/">
+        <meta name="text:Link 5" content="">
+        <meta name="text:Link 5 URL" content="/">
+        <meta name="color:Entire Background" content="black">
+        <meta name="color:Command Label" content="limegreen">
+        <meta name="color:Terminal Font" content="white">
+        <meta name="color:Link Post Border" content="red">
+        
+        <style>
+            html,body{
+                padding: 0px;
+                margin: 0px;
+                width: 100%;
+                height: 100%;
+                background: url({image:Background Image});
+                background-repeat: no-repeat;
+                background-position: center; 
+                background-attachment: absolute;
+                font-family: 'PT Sans', sans-serif;
+            }
+            .nav-bar-container{
+                background-color: #414141;
+                height: 30px;
+                padding: 3px;
+            }
+            .nav-bar-container ul, .second-layer-bar ul{
+                padding: 0px 15px;
+                list-style-type: none;
+                font-size: 12pt;
+                margin: 0;
+            }
+            .nav-bar-container ul li, .second-layer-bar ul li{
+                display: inline;
+                margin: auto 15px auto auto;
+            }
+            .nav-bar-container a, .second-layer-bar li, .second-layer-bar .btn, .link-container a, .link-container a:hover, .blogger-info-container, .asker a, .asker a:hover, .post-content-container a, #date-and-time, .pagination .fas{
+                color: {color:Terminal Font};
+                text-decoration: none;
+            }
+            
+            .second-layer-bar{
+                background-color: #000000;
+                height: 30px;
+                padding: 0px;
+                margin: 0;
+            }
+            .first-col{
+                padding: 0px 2.5px;
+                height: 30px;
+            }
+            .first-col .btn{
+                padding: 0px;
+            }
+            .first-col .fas{
+                padding: 0px 2.5px;
+                vertical-align: 2px;
+            }
+            #places-disabled{
+                vertical-align: -2px;
+            }
+            .link-container{
+                margin-top: 15%;
+                background-color: #2E2E2E;
+                padding-top: 25px;
+                padding-bottom: 50px;
+                border-radius: 1.5%;
+            }
+            .link-container>button:after{
+                position: absolute;
+                left: 50px;
+                transform: translateX(-50%);
+                top: -10px;
+                width: 0;
+                height: 0;
+                content: '';
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #2E2E2E;
+            }
+            .link-container button{
+                width: 385px;
+            }
+           .btn:focus,.btn:active {
+               outline: none !important;
+               box-shadow: none;
+            }
+            .link-container button:hover{
+                background-color: #3EA8E1;
+            }
+            .link-container a:hover{
+                text-decoration: none;
+            }
+            
+            .second-col{
+                text-align: center;
+                padding: 0px 2.5px;
+                height: 30px;
+            }
+            #date-and-time{
+                padding: 2.5px;
+            }
+            .third-col{
+                text-align: right;
+                padding: 0px 2.5px;
+                height: 30px;
+            }
+            .third-col ul{
+                padding: 0;
+            }
+            .third-col .fa-sort-down{
+                vertical-align: 3px;
+                margin-left: 0px;
+                width: 25px;
+            }
+            .blogger-info-container{
+                margin-top: 15%;
+                background-color: #2E2E2E;
+                padding: 25px 25px 50px 25px;
+                border-radius: 1.5%;
+                margin-left: -275px;
+                width: 350px;
+            }
+            .blogger-info-container::after{
+                position: absolute;
+                right: 0px;
+                transform: translateX(-50%);
+                top: -10px;
+                width: 0;
+                height: 0;
+                content: '';
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #2E2E2E;
+            }
+            .blogger-info-container ul li{
+                display: inherit;
+            }
+           .blog-avatar{
+               width: 25%;
+               height: 25%;
+               border: 2px solid #DCDEDF;
+               margin: auto auto auto 25px;
+           }
+            #blog-title{
+                margin-left: 15px;
+                display: inline-flex;
+                vertical-align: -5px;
+            }
+            .description-container{
+                margin-top: 25px;
+                text-align: justify;
+            }
+            .credit{
+                text-align: center;
+            }
+            .credit a, .credit a:hover{
+                text-decoration: none;
+                color: #DCDEDF;
+            }
+            
+            .post-container{
+                display: block;
+                margin: 2.5% auto auto auto;
+                max-width: 1000px;
+                height: 60%;
+            }
+            .post-container-name{
+                text-align: right;
+                height: 30px;
+                margin-right: 175px;
+            }
+            .title-bar, .menu-bar{
+                width: auto;
+                height: 30px;
+                margin: auto -15px auto -15px;
+                padding: 0;
+                background-color: #DCDEDF;
+                color: #414141;
+            }
+            .title-bar{
+                border-top-left-radius: 10px 10px;
+                border-top-right-radius: 10px 10px;
+            }
+            .menu-bar ul{
+                list-style-type: none;
+                padding: 0;
+                margin-left: 15px;
+            }
+            .menu-bar ul li{
+                display: inline;
+                padding: 0;
+                margin-right: 12px;
+            }
+            .window-options{
+                height: 30px;
+                margin: auto 15px auto 0px;
+                padding: 2.5px;
+                text-align: right;
+            }
+            .window-options ul{
+                list-style-type: none;
+                display: inline-flex;
+            }
+            .window-options ul li{
+                margin-left: 20px;
+            }
+            .fa-square{
+                font-size: 7pt;
+                padding: 4px;
+                text-align: center;
+                vertical-align: 2px;
+                border-radius: 50%;
+                background-color: #414141;
+                color: #DCDEDF;
+            }
+            
+            .post-content-container{
+                background-color: black;
+                height: 100%;
+                opacity: 0.95;
+                margin: auto -15px auto -15px;
+                padding: 0px;
+                
+                overflow-y: scroll;
+                padding: 10px;
+            }
+            .cmd-name{
+                color: {color:Command Label}; 
+                font-weight: bolder;
+            }
+            .text-title, .chat-title{
+                font-weight: bold; 
+                text-align: center;
+            }
+            .text-title a, .text-title a:hover, .chat-title a, .chat-title a:hover{
+                text-decoration: none;
+                color: #DCDEDF;
+            }
+            #link-name{
+                font-size: 24pt;
+                text-decoration: none;
+                padding: 10px;
+                border: 1px dashed {color:Link Post Border};
+                margin-top: 25px;
+            }
+            #link-name:hover{
+                background-color: {color:Link Post Border};
+            }
+            .asker{
+                text-align: center;
+            }
+            .asker a, .asker a:hover{
+                text-decoration: none;
+                color: ;
+            }
+            .page-container{
+                width: 100%;
+                color: white;
+                position: relative;
+                margin: 7%  auto auto auto;
+                text-indent: 10px;
+                padding: 0px;
+                font-family: courier;
+            }
+            .pagination{
+                background-color: black;
+                width: 15%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                padding: 0px;
+                position: relative;
+            }
+            .fa-caret-square-left{
+                margin-left: -50px;   
+            }
+            #page-number{
+                width: 25%;
+                background-color: pink;
+                padding: 0px;
+                margin: 0px;
+                display: inline-block;
+                
+            }
+            .note-count{
+                padding: 15px; 
+                border: 1px dashed white;
+            }
+            .post-options{
+                float: right;
+                width: 20%;
+                justify-content: center;
+                margin-top: -15px;
+                padding: 0px;
+                display: inline-flex;
+            }
+            .like_button{
+                margin: 0px 10px 0px 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+            <div class="nav-bar-container">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/archive">Archive</a></li>
+                    <li><a href="/rss">RSS</a></li>
+                    <li>
+                        {block:AskEnabled}
+                            <a href="/ask">Help</a>
+                        {/block:AskEnabled}
+                    </li>
+                    <li>
+                        {block:SubmissionEnabled}
+                            <a href="/submit">{SubmitLabel}</a>
+                        {/block:SubmissionEnabled}
+                    </li>
+                </ul>
+            </div>
+            <div class="second-layer-bar row">
+                <div class="col-4 first-col">
+                    <ul>
+                        <li>
+                            <div class="btn-group dropdown-button">
+                                <button type="button" class="btn" data-toggle="dropdown">Applications <i class="fas fa-sort-down"></i></button>   
+                                <div class="dropdown-menu link-container">
+                                    <button class="dropdown-item" type="button"><a href="{text:Link 1 URL}">01 - {text:Link 1}</a></button>
+                                    <button class="dropdown-item" type="button"><a href="{text:Link 2 URL}">02 - {text:Link 2}</a></button>
+                                    
+                                    <button class="dropdown-item" type="button"><a href="{text:Link 3 URL}">03 - {text:Link 3}</a></button>
+                                    
+                                    <button class="dropdown-item" type="button"><a href="{text:Link 4 URL}">04 - {text:Link 4}</a></button>
+                                    
+                                    <button class="dropdown-item" type="button"><a href="{text:Link 5 URL}">05 - {text:Link 5}</a></button>
+                                </div>
+                            </div>
+                        </li>
+                        <li id="places-disabled">Places <i class="fas fa-sort-down"></i></li>
+                    </ul>
+                </div>
+                
+                <div class="col-4 second-col">
+                
+                    <p id="date-and-time"></p>
+                </div>
+                
+                <div class="col-4 third-col">
+                    <ul>
+                        <li><i class="fas fa-wifi"></i></li>
+                        <li><i class="fas fa-volume-up"></i></li>
+                        <li><i class="fas fa-power-off"></i></li>
+                        <li>
+                             <div class="btn-group dropdown-button">
+                                <button type="button" class="btn" data-toggle="dropdown">root<i class="fas fa-sort-down"></i></button>
+                                <div class="dropdown-menu blogger-info-container">
+                                       {block:ShowAvatar}
+                                            <img class="blog-avatar avatar-style-{AvatarShape}" src="{PortraitURL-128}">
+                                        {/block:ShowAvatar} <h6 id="blog-title">{Title}</h6>
+                                        
+                                        <div class="container description-container">
+                                            <p id="description-content">{Description}</p>
+                                            <hr style="width: 150px; background-color: #A2A2A2; opacity: 0.2;"><p class="credit">Theme By <a href="https://aliceontheme.tumblr.com/">Alice</a></p>
+                                        </div>
+                                </div>
+                            </div>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="container post-container">
+                <div class="title-bar row">
+                    <div class="col post-container-name">
+                        <label>root@{text:Terminal Name}: ~</label>
+                    </div>
+                    <div class="col-3 window-options">
+                        <ul>
+                            <li><i class="fas fa-minus-circle"></i></li>
+                            <li><i class="far fa-square"></i></li>
+                            <li><i class="fas fa-times-circle"></i></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-bar">
+                    <ul>
+                        <li>File</li>
+                        <li>Edit</li>
+                        <li>View</li>
+                        <li>Search</li>
+                        <li>Terminal</li>
+                        <li>Help</li>
+                    </ul>
+                </div>
+                <div class="post-content-container" style="color:{color:Terminal Font}; font-family:Courier;">
+                    
+                   
+                        {block:Posts}
+                        
+                           {block:Text}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /text_post/file.txt</br>
+                            <p class="text-title">Title: {block:Title}<a href="{Permalink}">{Title}</a>{/block:Title}</p>
+                            {Body}
+                        {/block:Text}
+                        
+                        {block:Photo}
+                        <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /photo_post/photo.jpeg
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}" class="photo-content-img" style="opacity:static; filter: contrast(-100px); position:inherit; display: initial;">
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Photo}
+                        
+                        {block:Photoset}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /photoset_post/album/
+                            {Photoset-500}
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Photoset}
+                        
+                        {block:Panorama}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /panorama_post/photo.png
+                            {LinkOpenTag}
+                                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}">
+                            {CloseOpenTag}
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Panorama}
+                        
+                        {block:Quote}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /quote_post/quote.txt
+                            <blockquote class="blockquote text-center">
+                                &ldquo;{Quote}&rdquo;
+                            </blockquote>
+        
+                            {block:Source}
+                                <p> - {Source}</p>
+                            {/block:Source}
+                        {/block:Quote}
+                        
+                        {block:Link}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> open browser {Host}<br>
+                            <a href="{URL}" {Target} id="link-name">{Name}</a>
+                            {block:Description}
+                                <p>{Description}</p>
+                            {/block:Description}    
+                        {/block:Link}
+                        
+                        {block:Chat}
+                        <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /chat_post/inbox/
+                            <p class="chat-title">Subject: {block:Title}<a href="{Permalink}">{Title}</a>{/block:Title}</p>
+                             {block:Lines}
+                                {block:Label}
+                                    <b>{Label}</b>
+                                {/block:Label}
+        
+                                <p>{Line}</p>
+                            {/block:Lines}
+                        {/block:Chat}
+                        
+                        {block:Audio}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /audio_post/audio.mp3<br>
+                            {block:AudioEmbed}
+                                {AudioEmbed-250}
+                            {/block:AudioEmbed}
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}
+                        {/block:Audio}
+                        
+                        {block:Video}
+                            <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /video_post/video.mp4<br>
+                            {Video-500}
+    
+                            {block:Caption}
+                                <p class="captions">{Caption}</p>
+                            {/block:Caption}<br>
+                        {/block:Video}
+                    
+                    {block:Answer}
+                        <label class="cmd-name">root@{text:Terminal Name}:~$</label> cat /answer_post/question/
+                            <div class="question-container">
+                                <p class="asker">
+                                    {Asker}:<br>
+                                    <a href="{Permalink}">{Question}</a>
+                                </p>
+                            </div>
+                            <span>Reply: {Answer}</span>
+                        {/block:Answer}
+                        
+                        
+                        <div class="note-count">
+                                Post Details: <br>
+                                {block:Date} 
+                                ----- {MonthNumberWithZero}/{DayOfMonthWithZero}/{ShortYear} {12Hour}:{Minutes}{CapitalAmPm}<br>
+                                {/block:Date}	
+                                {block:NoteCount}
+                                ----- {NoteCountWithLabel}
+                                {/block:NoteCount}<br>
+                                <div class="post-options">
+                                    {LikeButton color="white"}
+                                    {ReblogButton color="white"}
+                                </div>
+                            </div></br>
+                    {/block:Posts}
+                </div>
+            </div>
+            
+            <div class="container page-container">
+                <div class="pagination">
+                    {block:Pagination}
+                        {block:PreviousPage}
+                            <a href="{PreviousPage}"><i class="fas fa-caret-square-left"></i></a>
+                        {/block:PreviousPage}
+                        {CurrentPage} of {TotalPages}
+                        {block:NextPage}
+                            <a href="{NextPage}"><i class="fas fa-caret-square-right"></i></a>
+                            {/block:NextPage}
+                    {/block:Pagination}
+                </div>
+            </div>
+            
+            <!-- do not change below this comment -->
+            <script>
+                function showDate(){
+                    var d = new Date();
+                var weekday = new Array(7);
+                weekday[0] = "Sunday";
+                weekday[1] = "Monday";
+                weekday[2] = "Tuesday";
+                weekday[3] = "Wednesday";
+                weekday[4] = "Thursday";
+                weekday[5] = "Friday";
+                weekday[6] = "Saturday";
+                
+                var n = weekday[d.getDay()];
+                
+                var hours = d.getHours();
+                var minutes = d.getMinutes();
+                var seconds = d.getSeconds();
+                
+                if(hours > 12){
+                    hours = hours - 12;
+                }
+                
+                if(minutes <= 9){
+                    minutes = "0" + minutes;
+                }
+                
+                document.getElementById("date-and-time").innerHTML = n + " " + hours +":"+ minutes;
+                setTimeout("showDate()",1000);
+                }
+                showDate();
+            </script>
+    </body>
+</html>
