@@ -32,7 +32,7 @@
         * Copyright © 2019 Alice All Rights Reserved
         
         Theme Name: blush theme
-        Version: 0.2
+        Version: 3.0
         Creator: Alice
         
         -->
@@ -104,7 +104,7 @@
                 width: 17em;
                 height: 92.5%;
                 max-height: 900px;
-                margin: auto 0px 0px 4em;
+                margin: auto 0px 0px 3.5em;
                 position: fixed;
                 display: inherit;
                 font-size: 11pt;
@@ -195,7 +195,7 @@
             /* posts */
             .post-container{
                 width: 45em;
-                margin: auto auto auto 26.5em;
+                margin: auto auto auto 25em;
                 color: {color:Post Body Color};
                 font-size: 9pt;
             }
@@ -268,7 +268,7 @@
             }
             
             /* responsive to small devices */
-            @media screen and (max-width: 1025px){
+            @media screen and (max-width: 800px){
                 .entire-content{
                     width: 100%;
                     margin: 2% 0 0 -5%;
@@ -283,6 +283,7 @@
                 .entire-content{
                     width: 100%;
                     margin: 0%;
+                    padding: 3.5%;
                     font-family: 'Raleway', sans-serif;
                 }
                 .sidebar-container{
@@ -360,6 +361,7 @@
                     padding: 5px;
                 }
                 .photoset-container{
+                    width: 100%;
                     display: block;
                 }
                 .video-content iframe{
@@ -519,7 +521,9 @@
                     
                     <div class="post-content photoset-container">
                         {block:Photoset}
-                            {Photoset}
+                            {block:Photos}
+                                <img src="{PhotoURL-500}"/>
+                            {/block:Photos}
         
                             {block:Caption}
                                 <p class="captions">{Caption}</p>
