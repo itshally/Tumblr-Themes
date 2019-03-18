@@ -32,7 +32,7 @@
         * Copyright © 2019 Alice All Rights Reserved
         
         Theme Name: midnight blue theme
-        Version: 2.0
+        Version: 3.0
         Creator: Alice
         
         -->
@@ -166,7 +166,7 @@
                 width: auto;
                 height: 100%;
                 display: block;
-                margin: 195px auto 0px auto;
+                margin: 10em auto 0px auto;
             }
             .post-container-content{
                 background-color: {color:Post Background Color};
@@ -361,9 +361,13 @@
             
             /* responsive to small devices */
             @media screen and (max-width: 1025px){
+                /* header */
+                #header-container{
+                   margin: auto;
+                }
                 /* posts */
                 #post-container{
-                    width: auto;
+                    margin-top: 8em;
                 }
                 .post-container-content{
                     width: 65%;
@@ -378,18 +382,39 @@
                     width: auto;
                 }
             }
-            /*below is 500*/
-            @media screen and (max-width:800px){
+            @media screen and (max-width: 999px){
                 /* header */
-                #header-title{
-                    font-size: 35pt;
-                    margin: 15px auto 15px auto;
+                #header-container{
+                    padding-bottom: 3.5%;
                 }
-                .link-list{
-                    font-size: 15pt;
+                #header-title{
+                    font-size: 40pt;
                 }
                 
                 /* posts */
+                #post-container{
+                    margin-bottom: 0%;
+                }
+            }
+            @media screen and (max-width:500px){
+                /* header */
+                #header-container{
+                    padding-bottom: 2.5%;
+                }
+                #header-title{
+                    font-size: 35pt;
+                    margin: auto;
+                }
+                .link-list{
+                    font-size: 12pt;
+                }
+                
+                /* posts */
+                #post-container{;
+                    width: auto;
+                    margin-top: 5em;
+                    margin-bottom: 5%;
+                }
                 #post-container, .post-container-content{
                     width: auto;
                 }
@@ -397,7 +422,9 @@
                     width: auto;
                     margin: auto;
                 }
-                
+                #tag-container{
+                    margin: auto;
+                }
                 /* pagination */
                 .pagination{
                     width: 100%;
@@ -455,7 +482,6 @@
                 #copyright-notice{
                     font-size: 10pt;
                 }
-                
             }
             
             /* Custom CSS*/
