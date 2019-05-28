@@ -32,7 +32,7 @@
         * Copyright © 2019 Alice All Rights Reserved
         
         Theme Name: midnight blue theme
-        Version: 3.0
+        Version: 4.0
         Creator: Alice
         
         -->
@@ -82,7 +82,7 @@
         <meta name="text:Pinterest Username" content="">
         
         <!-- conditional metadata -->
-        <meta name="if:Show Background Image" content="0">
+        <meta name="if:Hide Background Image" content="0">
         <meta name="if:Header Title Glow" content="1">
         <meta name="if:Show Link 1" content="1">
         <meta name="if:Show Link 2" content="1">
@@ -109,7 +109,6 @@
                 margin: 0px;
             }
             html{
-                background: url({image:Background Image});
                 height: 100%;
                 font-family: 'Catamaran', sans-serif;
             }
@@ -129,7 +128,7 @@
                 margin-top: 2.5%;
                 font-family: 'Dancing Script', cursive;
                 {block:ifHeaderTitleGlow}
-                    text-shadow: 0px 0px 25px #9F9FA1;
+                    text-shadow: 0px 0px 25px #9f9fA1;
                 {/block:ifHeaderTitleGlow}
                 text-align: center;
             }
@@ -158,10 +157,12 @@
             #post-container{
                 background-image: url({image:Background Image});
                 background-repeat: no-repeat;
-                background-size: cover;
-                {block:ifShowBackgroundImage}
+                background-size:100% 100%;
+                background-attachment: fixed;
+                background-position: center;
+                {block:ifHideBackgroundImage}
                     background: linear-gradient(180deg, {color:Header Background Color} , #FFFBFE);
-                {/block:ifShowBackgroundImage}
+                {/block:ifHideBackgroundImage}
                 position: initial;
                 width: auto;
                 height: 100%;
@@ -179,7 +180,6 @@
             }
             .chat-title, .post-quote, .text-title{
                 color: {color:Title Text};
-                /*font-family: 'Dancing Script', cursive;*/
                 font-size: 21pt;
                 font-weight: normal;
             }
@@ -222,9 +222,12 @@
                 padding: 0px;
             }
             #tag-container{
-                float: left;
-                width: 60%;
-                margin-left: 25px;
+                width: 100%;
+                padding: 5px;
+                overflow: auto;
+            }
+            #post-footer{
+                width: 100%;
             }
             #post-options{
                 float: right;
@@ -252,7 +255,7 @@
             .tag-links{
                 color: #2F394D;
                 background-color: #BFBFC0;
-                padding: 2px 5px 2px 5px;
+                padding: 2px 5px;
                 border-radius: 5%;
                 text-decoration: none;
                 font-size: 8.5pt;
@@ -482,6 +485,7 @@
                 #copyright-notice{
                     font-size: 10pt;
                 }
+                
             }
             
             /* Custom CSS*/
